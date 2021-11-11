@@ -1,6 +1,8 @@
 package Analysis;
 
 public class HaikuPoem {
+    private String author;
+    private String id;
     private String firstLine;
     private String secondLine;
     private String thirdLine;

@@ -1,3 +1,5 @@
+import Analysis.HaikuAnalysisEngine;
+import Analysis.HaikuPoem;
 import UI.Menu;
 
 import java.util.Scanner;
@@ -9,8 +11,10 @@ public class HaikuApp {
         HaikuApp app = new HaikuApp();
 
         app.menu.welcomeUser();
-        app.menu.getInput();
+        HaikuPoem poem = Menu.userInput();
 
 
+
+        HaikuAnalysisEngine.isHaikuValid(poem);
     }
 }
