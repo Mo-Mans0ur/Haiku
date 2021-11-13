@@ -15,10 +15,12 @@ public class HaikuAnalysisEngine {
             System.out.println("try again");
 
         }if (vowelCounter3(poem) == 5) {
-            System.out.println("Amazing!! the third line is done");
+            System.out.println("Amazing!! the third line is done\n");
+            System.out.println("now that you are done lets store it for memories");
         } else if (vowelCounter3(poem) != 5) {
             System.out.println("Nope sorry");
         }
+
     }
 
     public static int vowelCounter1(HaikuPoem poem) {
