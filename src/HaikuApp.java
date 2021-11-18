@@ -16,7 +16,13 @@ public class HaikuApp {
 
 
         HaikuAnalysisEngine.isHaikuValid(poem);
-        HaikuWriter.setWriter();
-        //kalder HaikuWRiterens metode, der gemmer digtet
+
+        if (HaikuAnalysisEngine.isHaikuValid(poem) == true) {
+            HaikuWriter.haikuStorer(poem);
+        } else if (HaikuAnalysisEngine.isHaikuValid(poem) == false) {
+            System.out.println("its not a haiku bud...");
+        }
+
+
     }
 }

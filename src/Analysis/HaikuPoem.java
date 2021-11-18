@@ -1,8 +1,6 @@
 package Analysis;
 
 public class HaikuPoem {
-    private String author;
-    private String id;
     private String firstLine;
     private String secondLine;
     private String thirdLine;
@@ -23,5 +21,13 @@ public class HaikuPoem {
 
     public String getThirdLine() {
         return thirdLine;
+    }
+
+    @Override
+    public String toString() {
+        return "HaikuPoem:\n" +
+                 firstLine +"\n" +
+                 secondLine + "\n" +
+                thirdLine;
     }
 }

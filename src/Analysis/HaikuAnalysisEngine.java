@@ -3,25 +3,33 @@ package Analysis;
 
 public class HaikuAnalysisEngine {
 
-    public static void isHaikuValid(HaikuPoem poem) {
+    public static boolean isHaikuValid(HaikuPoem poem) {
         if(vowelCounter1(poem) == 5){
             System.out.println("Great!! thats the first line done");
-        } else if (vowelCounter1(poem) != 5) {
-            System.out.println("try again");
 
+        } else if (vowelCounter1(poem) != 5) {
+            System.out.println("try again\n");
+            return false;
         }if (vowelCounter2(poem) == 7) {
             System.out.println("nice!! the Second line is done");
+
         } else if (vowelCounter2(poem) != 7) {
-            System.out.println("try again");
+            System.out.println("sorry bud try again\n");
 
         }if (vowelCounter3(poem) == 5) {
             System.out.println("Amazing!! the third line is done\n");
-            System.out.println("now that you are done lets store it for memories");
+            System.out.println("now that you are done lets store it for memories \nits in the .txt file");
+            return true;
         } else if (vowelCounter3(poem) != 5) {
             System.out.println("Nope sorry");
-        }
 
+        }
+        return isHaikuValid(poem);
     }
+
+
+
+
 
     public static int vowelCounter1(HaikuPoem poem) {
         int vowelcount = 0;
@@ -38,6 +46,9 @@ public class HaikuAnalysisEngine {
         return vowelcount;
     }
 
+
+
+
     public static int vowelCounter2(HaikuPoem poem) {
         int vowelcount = 0;
 
@@ -52,6 +63,9 @@ public class HaikuAnalysisEngine {
         System.out.println("numbers of vowels in the second sentence is = " + vowelcount);
         return vowelcount;
     }
+
+
+
 
     public static int vowelCounter3(HaikuPoem poem) {
         int vowelcount = 0;
